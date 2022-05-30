@@ -14,19 +14,19 @@
                 <form>
                     <div class="mb-3">
                         <label for="inputEmail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
                         <label for="inputPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" 
+                        <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" required
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$">
                         <div id="passwordHelp" class="form-text">At least one number, one uppercase and one lowercase letter totaling 10 characters.</div>
 
                     </div>
                     <div class="mb-3">
                         <label for="inputWebsite" class="form-label">Website url</label>
-                        <input type="website" class="form-control" id="inputWebsite" aria-describedby="websiteHelp" 
+                        <input type="website" class="form-control" id="inputWebsite" aria-describedby="websiteHelp" required
                         pattern="https?://.+">
                         <div id="websiteHelp" class="form-text">Must beginning with &quot;http://&quot; or &quot;https://&quot;.</div>
 
@@ -35,7 +35,7 @@
                         <input type="checkbox" class="form-check-input" id="inputCheckBox">
                         <label class="form-check-label" for="inputCheckBox">Check me out</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <input type="submit" class="btn btn-primary">Submit</input>
                 </form>
             </article>
         </section>

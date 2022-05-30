@@ -49,23 +49,23 @@
                             <div class="row">
                                 <div class="col-6 mb-4">
                                     <label for="inputProductNumber" class="form-label">Product Number</label>
-                                    <input type="number" class="form-control" id="inputProductNumber">
+                                    <input type="number" class="form-control" id="inputProductNumber" required>
                                 </div>
 
                                 <div class="col-6 mb-4">
                                     <label for="inputStockQuantity" class="form-label">Quantity in Stock</label>
-                                    <input type="number" class="form-control" id="inputStockQuantity" placeholder="0">
+                                    <input type="number" class="form-control" id="inputStockQuantity" placeholder="0" required>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6 mb-4">
                                     <label for="inputName" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="inputName">
+                                    <input type="text" class="form-control" id="inputName" required>
                                 </div>
 
                                 <div class="col-6 mb-4">
                                     <label for="inputSupplier" class="form-label">Supplier</label>
-                                    <select type="text" class="form-control" id="inputSupplier">
+                                    <select type="text" class="form-control" id="inputSupplier" required>
                                         <option selected value="">Select Supplier</option>
                                         <option value="1">Supplier 1</option>
                                         <option value="2">Supplier 2</option>
@@ -78,12 +78,12 @@
                             <div class="row">
                                 <div class="col-6 mb-4">
                                     <label for="inputProductName" class="form-label">Unit Price</label>
-                                    <input type="text" class="form-control" id="inputProductName" pattern="(\[0-9]+(. [0-9]+)?)" placeholder="0.0">
+                                    <input type="text" class="form-control" id="inputProductName" pattern="(\[0-9]+(. [0-9]+)?)" placeholder="0.0" required>
                                 </div>
 
                                 <div class="col-6 mb-4">
                                     <label for="inputDateSupplied" class="form-label">Date Supplied</label>
-                                    <input type="date" class="form-control" id="inputDateSupplied" aria-describedby="dateSuppliedHelp">
+                                    <input type="date" class="form-control" id="inputDateSupplied" aria-describedby="dateSuppliedHelp" required>
                                     <div id="dateSuppliedHelp" class="form-text">Enter a valid Date.</div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                                 <div class="col-6 pt-4">
                                     <button type="reset" class="btn btn-outline-dark mb-1">Reset</button>
                                     <button type="cancel" class="btn btn-outline-danger mb-1">Cancel</button>
-                                    <button type="submit" class="btn btn-primary mb-1">Submit</button>
+                                    <input type="submit" class="btn btn-primary mb-1">Submit</input>
                                 </div>
                             </div>
                         </form>
