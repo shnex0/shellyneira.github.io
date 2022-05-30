@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ß, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section>
+            <article class="d-flex align-items-center justify-content-center">
+                <form>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$">
+                        <div id="passwordHelp" class="form-text">At least one number, one uppercase and one lowercase letter totaling 10 characters.</div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputWebsite" class="form-label">Website url</label>
+                        <input type="website" class="form-control" id="inputWebsite" aria-describedby="websiteHelp" 
+                        pattern="https?://.+">
+                        <div id="websiteHelp" class="form-text">Must beginning with &quot;http://&quot; or &quot;https://&quot;.</div>
+
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="inputCheckBox">
+                        <label class="form-check-label" for="inputCheckBox">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
