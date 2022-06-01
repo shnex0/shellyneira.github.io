@@ -16,8 +16,8 @@ main,nav,section{
   display:none
 }
 a{
-  color:#000000;
-  text-decoration: none;
+  color:#000;
+  text-decoration:none;
   background-color:transparent
 }
 a:hover{
@@ -60,7 +60,8 @@ button::-moz-focus-inner{
 }
 @font-face{
   font-family:webflow-icons;
-  src:url("data:application/x-font-ttf;") format('truetype');
+  src:url(data:application/x-font-ttf;
+  ) format('truetype');
   font-weight:400;
   font-style:normal
 }
@@ -336,12 +337,8 @@ p{
   right:0;
   bottom:0;
   z-index:0;
-  background-color:transparent;
-  background-image:url(https://uploads-ssl.webflow.com/62855a3eb5129777bf988cbb/62855a3eb512976773988cca_Grain%20Background.png),linear-gradient(52deg,rgba(114,184,255,.2),rgba(255,255,255,.26) 51%,rgba(154,126,255,.32)),url(https://uploads-ssl.webflow.com/62855a3eb5129777bf988cbb/6285cb8cf3e3b9b727b04c97_cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjQzLXBmLXM0OC1hZS0wNC1qb2I1OTguanBn.png);
-  background-position:0 0,0 0,0 0;
-  background-size:300px 300px,auto,cover;
-  background-repeat:round;
-  background-attachment: fixed;
+	background: linear-gradient(-45deg, coral, violet, deepskyblue, lightgreen);
+  background-attachment:fixed
 }
 .text-underline{
   display:inline-block;
@@ -623,10 +620,6 @@ p{
       padding-top:120px;
       padding-bottom:120px
   }
-  .background-layer{
-      background-position:0 0,50% 100%;
-      background-size:300px 300px,auto
-  }
   .paragraph-large{
       font-size:18px
   }
@@ -669,9 +662,6 @@ p{
   }
   h4{
       font-size:22px
-  }
-  .background-layer{
-      background-size:auto,auto,cover
   }
   .margin-bottom-medium{
       margin-bottom:24px
