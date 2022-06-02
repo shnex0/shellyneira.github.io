@@ -1,7 +1,8 @@
-const form = document.querySelector('form')
+const form = document.getElementById('addProductForm');
+form.addEventListener("submit", showAddProductModal);
 
-form.onsubmit = (e) => {
-  e.preventDefault()
+function showAddProductModal(event){
+  event.preventDefault();
   console.log('submitted')
 
   const productNumber = document.getElementById('inputProductNumber').value;
@@ -13,7 +14,7 @@ form.onsubmit = (e) => {
    
   const modal = new bootstrap.Modal(document.getElementById('productModal'), {keyboard: false})
    
-  document.getElementById('productModalLabel').innerHTML = 'Product &quot;' + name + '&quot; added successfully'
+  document.getElementById('productModalLabel').innerHTML = 'Product &quot;' + name + '&quot; added successfully ✓'
   
   document.getElementById('productBody').innerHTML = 
       '<h5>Product Information:</h5>'+
