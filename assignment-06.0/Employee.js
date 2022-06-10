@@ -22,7 +22,7 @@ const Employee = () => {
     const setName = (name) => (this.name = name);
   
     const increaseSalary = (percentage) => {
-        setSalary(getSalary * percentage / 100);
+        setSalary(getSalary * (percentage / 100));
     };
     const incrementAge = () => {
         setAge(getAge+1);
