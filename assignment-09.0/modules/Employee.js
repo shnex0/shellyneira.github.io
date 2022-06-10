@@ -3,29 +3,19 @@
 import { Person } from "./Person.js";
 
 export class Employee extends Person {
+  #salary = 0.0;
+  #hireDate = new Date();
 
-  #Salary;
-  #hireDate;
-
-  constructor(name, dateOfBirth, Salary, hireDate) {
+  constructor(name, dateOfBirth, salary, hireDate) {
     super(name, dateOfBirth);
-    this.#Salary = Salary;
+    this.#salary = salary;
     this.#hireDate = hireDate;
   }
 
-  getSalary() {
-    return this.#Salary;
-  }
-  getHireDate() {
-    return this.#hireDate;
-  }
-  
+  get salary()  {this.#salary };
+  get hireDate() { return this.#hireDate }
+
   doJob(jobTitle) {
-    console.log(
-      `${this.name} is a ${jobTitle} who earns ${new Intl.NumberFormat(
-        "en-US",
-        { style: "currency", currency: "USD" }
-      ).format(this.#Salary)}`
-    );
+    console.log(`${this.name} is a ${jobTitle} who earns ${new Intl.NumberFormat("en-US",{ style: "currency", currency: "USD" }).format(this.#salary)}`);
   }
 }

@@ -3,55 +3,71 @@
 /**
  * Question 1
  */
-let Person = {
+let person = {
   name: "",
-  dateOfBirth: "",
-
-  setName: function (name) {
-    this.name = name;
-  },
+  dateOfBirth: null,
   getName: function () {
     return this.name;
   },
+  setName: function (name) {
+    this.name = name;
+  }
 };
 
-function isPerson() {
-  let Jo = Object.create(Person);
-  Jo.setName("johan");
-  Jo.dateOfBirth = "1998-12-10";
-  console.log("The Person's name is " + Jo.getName());
-  console.log("John was born on " + Jo.dateOfBirth);
-}
-isPerson();
+const john = Object.create(person);
+console.log(john)
+console.log(john.prototype)
+
+john.setName("john");
+john.dateOfBirth = new Date(1998,11,10);
+
+console.log(`The person's name is ${john.getName()}.
+${john.getName()} was born on ${new Intl.DateTimeFormat().format(john.getDateOfBirth())}`);
 
 /**
  * Question 02
  */
-let EmployeeObjectloyee = {
-  __proto__: Person,
-  Salary: "0",
-  hireDate: "Mar,8,2022",
+const employee = {
+  __proto__: person,
+  salary: 0.0,
+  hireDate: new Date(),
   doJob: function (job) {
-    console.log(this.getName() + " is a " + job + " who earns $" + this.Salary);
+    console.log(`${this.getName()} is a ${job} who earns ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(this.salary)}`);
   },
 };
-function isEmployeeObjectloyee() {
-  let EmployeeObject = Object.create(EmployeeObjectloyee);
-  EmployeeObject.setName("Anna");
-  EmployeeObject.Salary = "249,995,50";
-  EmployeeObject.doJob("Programmer");
-}
-isEmployeeObjectloyee();
+
+const anna = Object.create(employee);
+anna.setName("Anna");
+anna.salary = 249995.50;
+anna.doJob("Programmer");
+
+const employee2 = Object.create(person, {
+    salary: {
+        writable: true,
+        configurablel: true,
+        enumareble: true,
+        value: 0.0
+    },
+    hireDate: {
+        writable: true,
+        configurablel: true,
+        enumareble: true,
+        value: new Date()
+    }
+});
+
 
 /**
  * Question 03
  */
-function Person(Name, DateOfBirth){
-this.Name=Name;
-this.DateOfBirth=DateOfBirth;
-this.toString=function(){
-    console.log("Name: "+ this.Name + " DateOfBirth: "+ this.DateOfBirth);
-};
+function Person(name, dateOfBirth){
+    this.name = name;
+    this.dateOfBirth = dateOfBirth;
 };
 
-new Person("Johan", "1998-12-10").toString();
+const peter = new Person("Peter", new Date(1985,10,10));
+Person.prototype.toString = function(){
+    return `{Name: ${this.name}, DateOfBirth: ${new Intl.DateTimeFormat().format(peter.getDateOfBirth())}}`
+}
+
+const john2 = new Person("John", new Date());
