@@ -3,7 +3,7 @@
 import { createServer } from "http";
 import { parse } from "url";
 import { readFile } from "fs";
-import { add } from "./addmod.js";
+import { add } from "./js/addmod.js";
 
 createServer((req, res) => {
     const endpoint = parse(req.url, true);
