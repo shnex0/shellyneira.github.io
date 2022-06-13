@@ -1,7 +1,7 @@
 "use strict";
 
-$("#container a").on("click", (event) => {
-    event.preventDefault(); 
-    $("#container").append('<section id="articlesList"><article><p>Article Title - <a href="">Click to Add a new Article</a></p></article></section>');
-  });
-  
+$("#container a").on("click", function(event) {
+  event.preventDefault();
+  console.log($(this).text());
+  $("#container").append(`<article><p>Article Title - <a href="https://google.com">Click to Add a new Article</a></p></article>`);
+});
