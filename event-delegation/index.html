@@ -4,34 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Delegation demo app</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/model.js" type="module"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./event-delegator.js"></script>
+    <title>Event Delegation</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul id="ulNavItems">
-                <li>
-                    <a id="hyplnkAppBranding" href="./index.html">CS472:::Event Delegation Demo</a>
-                </li>
-            </ul>
+            <a href src="#">CS472 ::: Event Delegation Demo </h2>
         </nav>
     </header>
-    <div id="mainContent">
-        <main>
-            <h1>Hello Event Delegation</h1>
-            <div id="container">
-                <section id="articlesList">
-                    <article>
-                        <p>Article Title - 
-                            <a href="https://google.com">Click to Add a new Article</a>
-                        </p>
-                    </article>
-                </section>
-            </div>
-        </main>
-    </div>
+    
+    <main>
+        <h1>Hello Event Delegation</h1>
+        <section id="add">
+            <article>
+                <p>Article Title - <a id="button" href="#"> Click to Add new Article</a></p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
